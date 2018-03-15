@@ -1,0 +1,139 @@
+*{margin: 0; padding: 0;}
+body{ font-size: 12px; }
+li{ list-style: none;}
+a{ text-decoration: none;}
+/*一级菜单默认样式*/
+.menu-container ul.menu-root > li{
+    width: 200px;
+    text-align: left;
+    position: relative;
+    font-family: Microsoft YaHei;
+}
+/*一级菜单文本样式*/
+.menu-container ul.menu-root > li > a {
+    font-size: 14px;
+    font-weight: bold;
+}
+/*一级菜单图标文本对齐样式-没有图标*/
+.menu-container ul.menu-root > li > a.no-icon > span.menu-text{
+    margin-left: 45px;
+}
+/*一级菜单图标文本对齐样式-text*/
+.menu-container ul.menu-root > li > a > .menu-text{
+    line-height: 40px;
+    margin-left: 5px;
+}
+/*一级菜单图标文本对齐样式-img*/
+.menu-container ul.menu-root > li > a > img.menu-icon {
+    height: 15px;
+    width: 15px;
+    border-radius: 5px;
+    float: left;
+    margin: 13px 0 0px 25px;
+}
+/*一级菜单图标文本对齐样式-fontsome*/
+.menu-container ul.menu-root > li > a >  i.fa {
+    border-radius: 5px;
+    float: left;
+    margin: 13px 0 0 25px;
+}
+
+
+/*二级及以下级别菜单样式，菜单宽度200px，和子级右悬浮位置要一样（position right -200px）*/
+.menu-container ul.menu-root > li > ul li{
+    width: 200px;
+    text-align: left;
+    position: relative;
+}
+/*二级及以下级别菜单文本样式*/
+.menu-container ul.menu-root > li > ul > li a {
+    font-size: 13px;
+    font-weight: bold;
+}
+/*二级及以下级别菜单图标文本对齐样式-没有图标*/
+.menu-container ul.menu-root > li > ul > li a.no-icon > span.menu-text {
+    margin-left: 27px;
+}
+/*二级及以下级别菜单图标文本对齐样式-text*/
+.menu-container ul.menu-root > li > ul > li a > .menu-text{
+    line-height: 40px;
+    margin-left: 5px;
+}
+/*二级及以下级别菜单图标文本对齐样式-img*/
+.menu-container ul.menu-root > li > ul a img.menu-icon {
+    height: 13px;
+    width: 13px;
+    margin: 13px 0 0 8px;
+}
+/*二级及以下级别菜单图标文本对齐样式-fontsome*/
+.menu-container ul.menu-root > li > ul a i.fa {
+    font-size: 13px;
+    margin: 13px 0 0 10px;
+}
+
+/* 1级菜单默认样式*/
+.menu-container ul.menu-root > li{
+    background: #23272D;
+}
+/* 2级菜单默认样式*/
+.menu-container ul.menu-root > li > ul li{
+    background: #2A2E36;
+}
+/* 3级菜单默认样式*/
+.menu-container ul.menu-root > li > ul > li > ul li{
+    background: #2A2E36;
+}
+/* 4级菜单默认样式*/
+.menu-container ul.menu-root > li > ul > li > ul > li > ul li{
+    background: #2A2E36;
+}
+/* 5级菜单默认样式 如果有更深子菜单，以此类推*/
+.menu-container ul.menu-root > li > ul > li > ul > li > ul > li > ul li{
+    background: #2A2E36;
+}
+
+/*默认菜单文本样式*/
+.menu-container li > a{
+    color: #aaa;
+}
+/*点击选择菜单样式*/
+.menu-container li > a.selected{
+    color: #fff;
+}
+/*标记选择样式*/
+.menu-container li> .hover-sign{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+/*鼠标放上 标记选择样式*/
+.menu-container li.hover-on > .hover-sign{
+    border-left: 3px solid #1A7AB9;
+}
+/*鼠标放上 菜单文本样式*/
+.menu-container li.hover-on > a{
+    color: #1A7AB9;
+}
+/*二级及以下级别菜单容器初始样式*/
+.menu-container ul > li > ul{
+    display: none;
+}
+/*展开折叠的箭头*/
+.menu-container ul.menu-root span.arrow{
+    position: absolute;
+    display: block;
+    right:10px;
+    top: 0;
+    width: 10px;
+    height: 40px;
+}
+/*展开折叠的箭头-折叠*/
+.menu-container ul.menu-root li > a > span.arrow{
+    background: url(images/arrows.png) no-repeat center center;
+}
+/*展开折叠的箭头-展开*/
+.menu-container ul.menu-root li.open > a > span.arrow{
+    background: url(images/arrows-on.png) no-repeat center center;
+}
